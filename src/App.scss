@@ -71,8 +71,6 @@ section {
   }
 }
 
-@media screen {}
-
 .capitalize {
   text-transform: capitalize;
 }
@@ -556,9 +554,27 @@ nav {
           right: 50%;
         }
       }
-
-
     }
-
   }
+
+  section .fixed__div {
+    width: 85%;
+  }
+
+  .contact .fixed__div{
+    align-items: center;
+    .socials__container{
+      justify-content: center;
+    }
+  }
+
+  .projector {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .scroll__btn__container {
+    display: none !important;
+  }
+
 }
