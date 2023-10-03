@@ -20,7 +20,7 @@
   content: '';
 }
 
-.text__dwarf{
+.text__dwarf {
   font-size: .35em;
   color: rgba(255, 255, 255, 0.01);
 }
@@ -60,7 +60,7 @@ section {
 
   .fixed__div {
     text-align: left;
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -70,6 +70,8 @@ section {
     transform: translate(-50%, -50%);
   }
 }
+
+@media screen {}
 
 .capitalize {
   text-transform: capitalize;
@@ -83,9 +85,10 @@ section {
   font-weight: bold;
 }
 
-.about{
+.about {
   line-height: 1.5rem;
-  .title{
+
+  .title {
     font-size: 1.5rem;
     text-decoration: underline;
   }
@@ -383,6 +386,16 @@ nav {
         color: transparent;
       }
 
+      .last {
+        position: absolute;
+        top: 48px;
+        right: -2px;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: white;
+      }
+
       .not-last {
         position: absolute;
         top: 49px;
@@ -405,16 +418,6 @@ nav {
         }
       }
 
-      .last {
-
-        position: absolute;
-        top: 48px;
-        right: -2px;
-        height: 5px;
-        width: 5px;
-        border-radius: 50%;
-        background-color: white;
-      }
 
       .number {
         position: absolute;
@@ -425,6 +428,7 @@ nav {
     }
 
     .active {
+
       .title,
       .number {
         color: cyan
@@ -499,8 +503,62 @@ nav {
 
 }
 
-@media (max-width:961px)  { 
-  .eye{
+@media (max-width:961px) {
+  .eye {
     display: none;
+  }
+
+  nav {
+    top: unset;
+    transform: unset;
+    bottom: 5%;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+
+    ul {
+      width: 80vw;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        width: 15vw;
+
+        .title {}
+
+        .number {
+          width: fit-content;
+          right: unset;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .not-last {
+          top: 70%;
+          transform: translateY(-50%);
+          right: unset;
+          left: 50%;
+          width: 100%;
+          height: 1px;
+
+          &:before {
+            left: 0;
+            box-shadow: unset;
+          }
+        }
+
+        .last {
+          top: 70%;
+          transform: translateY(-50%);
+          z-index: 3;
+          right: 50%;
+        }
+      }
+
+
+    }
+
   }
 }

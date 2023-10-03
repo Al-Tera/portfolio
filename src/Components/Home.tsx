@@ -37,7 +37,7 @@ function Home({ setSectObserve }: Props) {
       <div className='fixed__div'>
         <p className="capitalize">{hour < 12 ? 'good day' : hour < 18 ? 'pleasant afternoon' : 'evening salutations'}!</p>
         <p className="">I'm Al Sultan.</p>
-        <p className="">Self-taught Frontend Web Developer.</p>
+        <p className="">Self-taught Frontend Web&nbsp;Developer.</p>
       </div>
     </section>
   )

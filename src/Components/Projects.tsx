@@ -70,22 +70,24 @@ function Projects({ setSectObserve }: Props) {
     }
   }
 
-  const handleClickLeft = () => {
-    if (scrollRef.current) {
+  const [delayBtnScroll, setDelayBtnScroll] = useState(false)
+  const handleScrollClick = (dir: string) => {
+    if (scrollRef.current && !delayBtnScroll) {
       scrollRef.current.scrollBy({
-        left: -300,
+        left: dir === 'l' ? -300 : 300,
         behavior: 'smooth'
       })
+      setDelayBtnScroll(true)
+
     }
   }
-  const handleClickRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: 300,
-        behavior: 'smooth'
-      })
+
+  useEffect(() => {
+    if (delayBtnScroll) {
+      const timeout = setTimeout(() => setDelayBtnScroll(false), 200)
+      return () => clearTimeout(timeout);
     }
-  }
+  }, [delayBtnScroll])
 
   const mouseMove = (e: any) => {
     const scroller = document.querySelector('.container_a')
@@ -278,10 +280,10 @@ function Projects({ setSectObserve }: Props) {
             }
           </div>
 
-          <div onClick={handleClickLeft} className='scroll__btn__container left'>
+          <div onClick={()=>handleScrollClick('l')} className='scroll__btn__container left'>
             <span className='left__btn' />
           </div>
-          <div onClick={handleClickRight} className='scroll__btn__container right'>
+          <div onClick={()=>handleScrollClick('r')} className='scroll__btn__container right'>
             <span className='right__btn' />
           </div>
         </div>

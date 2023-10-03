@@ -21,9 +21,11 @@ function Sidebar({ sectObserve }: Props) {
                         >
                             <p className='title'>{sect}</p>
                             {
-                                sect !== sections[sections.length - 1]
-                                    ? <span className="not-last" />
-                                    : <span className="last" />
+                                <span className={`${
+                                    sect !== sections[sections.length - 1] ? 
+                                    'not-last' : 'last'}`}
+                                
+                                />
                             }
                             <p className="number">0{i + 1}</p>
                         </li>

@@ -41,7 +41,7 @@ function Contact({ setSectObserve }: Props) {
     <section ref={sectionRef} className='contact'>
       <div className='fixed__div'>
         <h1>
-          Contact Me
+          Contact
         </h1>
         <div>
           <p className='text__email' onClick={handleMailTo}>lake.horta@gmail.com</p>
