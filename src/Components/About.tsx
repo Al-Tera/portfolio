@@ -40,7 +40,7 @@ function About({ setSectObserve }: Props) {
           <span className='text__dwarf'> So long as it doesn't mend space and time...</span>
         </p>
         <p className='title'>Tech Stack:</p>
-        <p>React, Angular, Vue, Typescript, Javascript, Firebase, Three.js, SCSS, Tailwind,&nbsp;HTML/CSS</p>
+        <p>Svelte, React, Angular, Vue, Typescript, Javascript, Firebase, Three.js, SCSS, Tailwind,&nbsp;HTML/CSS</p>
       </div>
     </section>
   )
