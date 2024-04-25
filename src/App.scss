@@ -6,7 +6,7 @@
   --black0: #454545;
   --black1: #242424;
   --black2: #181818;
-  --blue0: #2ABEFE;
+  --blue0: #2abefe;
 }
 
 * {
@@ -17,14 +17,13 @@
 *:before,
 *:after {
   position: absolute;
-  content: '';
+  content: "";
 }
 
 .text__dwarf {
-  font-size: .35em;
+  font-size: 0.35em;
   color: rgba(255, 255, 255, 0.01);
 }
-
 
 header {
   position: fixed;
@@ -44,11 +43,8 @@ header {
   text-decoration: none;
 
   a {
-
     color: white !important;
   }
-
-
 }
 
 section {
@@ -92,7 +88,7 @@ section {
   }
 }
 
-.contact>.fixed__div {
+.contact > .fixed__div {
   display: flex;
   gap: 25px;
 
@@ -112,7 +108,7 @@ section {
       height: 50x;
       width: 50px;
 
-      div>* {
+      div > * {
         background-color: red;
         transform: scale(1.5);
       }
@@ -126,7 +122,6 @@ section {
       }
     }
   }
-
 }
 
 .project .fixed__div {
@@ -170,7 +165,6 @@ section {
     width: 30%;
     height: 95%;
     background: linear-gradient(to right, transparent, var(--black2) 90%);
-
   }
 
   &:after {
@@ -245,10 +239,9 @@ section {
     &:after,
     &:before {
       left: 1px;
-      top: .5px;
+      top: 0.5px;
       transform-origin: top left;
       transform: rotate(calc(45deg - var(--rotateUpLeft)));
-
     }
 
     &:after {
@@ -314,7 +307,6 @@ section {
         z-index: -1;
       }
 
-
       .title {
         font-weight: bold;
         font-size: 1.2rem;
@@ -327,7 +319,6 @@ section {
       .original {
         pointer-events: none;
       }
-
 
       .hide {
         display: none;
@@ -416,26 +407,22 @@ nav {
         }
       }
 
-
       .number {
         position: absolute;
         right: -2rem;
         font-family: monospace;
-        color: rgba(0, 255, 255, 0.35)
+        color: rgba(0, 255, 255, 0.35);
       }
     }
 
     .active {
-
       .title,
       .number {
-        color: cyan
+        color: cyan;
       }
     }
   }
-
 }
-
 
 .outer-mote {
   position: fixed;
@@ -444,7 +431,8 @@ nav {
   top: -250px;
   left: -250px;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px rgba(218, 165, 32, 0.25), 0 0 0 30px var(--black2), 0 0 0 40px rgba(218, 165, 32, 0.5);
+  box-shadow: 0 0 0 10px rgba(218, 165, 32, 0.25), 0 0 0 30px var(--black2),
+    0 0 0 40px rgba(218, 165, 32, 0.5);
   display: grid;
   place-items: center;
   animation: animObserver 100s linear infinite;
@@ -453,13 +441,10 @@ nav {
     height: 110%;
     transform: rotate(-45deg);
     width: 50px;
-    box-shadow: 0 480px 0 50px var(--black2),
-      90px -420px 0 0px var(--black2),
-      -50px -410px 0 -20px var(--black2),
-      -90px -410px 0 -20px var(--black2);
+    box-shadow: 0 480px 0 50px var(--black2), 90px -420px 0 0px var(--black2),
+      -50px -410px 0 -20px var(--black2), -90px -410px 0 -20px var(--black2);
     background-color: var(--black2);
   }
-
 }
 
 .eye {
@@ -483,10 +468,8 @@ nav {
     height: 50%;
     border-radius: 50%;
     background-color: white;
-    box-shadow: inset 0 0 0 4px white,
-      inset 0 0 0 5px black,
-      inset 0 0 0 7px white,
-      inset 0 0 0 10px var(--blue0);
+    box-shadow: inset 0 0 0 4px white, inset 0 0 0 5px black,
+      inset 0 0 0 7px white, inset 0 0 0 10px var(--blue0);
   }
 }
 
@@ -498,10 +481,9 @@ nav {
   100% {
     transform: rotate(360deg);
   }
-
 }
 
-@media (max-width:961px) {
+@media (max-width: 961px) {
   .eye {
     display: none;
   }
@@ -523,7 +505,9 @@ nav {
       li {
         width: 15vw;
 
-        .title {}
+        .title {
+          text-align: center;
+        }
 
         .number {
           width: fit-content;
@@ -561,9 +545,9 @@ nav {
     width: 85%;
   }
 
-  .contact .fixed__div{
+  .contact .fixed__div {
     align-items: center;
-    .socials__container{
+    .socials__container {
       justify-content: center;
     }
   }
@@ -576,5 +560,4 @@ nav {
   .scroll__btn__container {
     display: none !important;
   }
-
 }
